@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -20,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="Selamat Datang,"
             android:textSize="14sp"
-            android:textColor="#2D2A26">
+            android:textColor="#2D2A26"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,9 +51,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:background="FFFFFF"
+            android:background="#FFFFFF"
             android:padding="16dp"
-            android:layoutmarginEnd="8dp">
+            android:layout_marginEnd="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -94,7 +100,59 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!--Bagian Judul : DaftarTugas Terbaru-->
+    <!--Banner Pengumuman dengan frame layout-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="24dp">
+
+    <!--layer 1 : Background lapisan belakang-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0984E3"/>
+
+    <!--layer 2 : Teks Pengumuman lapisan depan-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PENGUMUMAN PENTING"
+            android:textSize="11sp"
+            android:textColor="#DFE6E9"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ujian Kompetensi RPL Dimulai hari Jumat ini!"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+    </FrameLayout>
+
+    <!--Tombol untuk ke halaman form-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TombolForm"
+        android:text="+ Tambah Tugas"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0984E3"
+        android:layout_marginBottom="16dp"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <!--Bagian Judul : Daftar Tugas Terbaru-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,3 +189,4 @@
     </LinearLayout>
 
 </LinearLayout>
+</FrameLayout>

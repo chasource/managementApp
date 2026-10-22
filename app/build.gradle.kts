@@ -5,15 +5,19 @@ plugins {
 android {
     namespace = "com.example.managementapp"
     compileSdk {
-        version = release(36) {
+        version = release(37) {
             minorApiLevel = 1
+        }
+
+        buildFeatures {
+            viewBinding = true
         }
     }
 
     defaultConfig {
         applicationId = "com.example.managementapp"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
@@ -44,4 +48,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+
+    implementation("com.android.databinding:viewbinding:8.0.0")
 }
