@@ -1,5 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias (com.android.application)
+    id (org.jetbrains.kotlin.android)
+    id (com.google.devtools.ksp)
 }
 
 android {
@@ -50,4 +53,12 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
 
     implementation("com.android.databinding:viewbinding:8.0.0")
+
+    //gradle room
+    def room_version = "2.6.1"
+    implementation (androidx.room:room-runtime:$room_version)
+    implementation (androidx.room:room-ktx:$room_version)
+
+    //kompiler room
+    ksp (androidx.room:room-compiler:$room_version)
 }
